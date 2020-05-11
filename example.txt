@@ -1,0 +1,30 @@
+begin axioms
+
+def number
+def 0
+
+number(0)
+
+def succ(x: number) -> z: number
+def +(x: number, y: number) -> z: number
+def *(x: number, y: number) -> z: number
+def -(x: number, y: number) -> z: number
+def /(x: number, y: number) -> z: number
+def -(x: number) -> z: number
+
+always x + 0 = x
+always x + y = z when x = z - y
+always x * y = z when x = z / y
+always -x = 0 - x
+
+end axioms
+
+def 1 = succ(0)
+
+always x + (-y) = x - y
+| -y = 0 - y
+| x + (-y) = x + (0 - y)
+| x + (0 - y) = (x + 0) - y
+| x + 0 = x
+| (x + 0) - y = x - y
+

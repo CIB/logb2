@@ -1,0 +1,12 @@
+begin axioms
+
+def Memory
+def Pointer
+def pointsTo(pointer: Pointer, memory: Memory)
+
+end axioms
+
+def MachineState as {
+    memory: Memory
+    instructionPointer: InstructionPointer
+}
