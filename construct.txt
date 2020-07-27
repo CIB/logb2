@@ -1,0 +1,18 @@
+Basic language constructs:
+- Statement list
+- Conclude
+- Open block
+    - Let
+    - Assume
+- Defined
+- Let quantifier
+- And, or, not, implies
+
+
+defined x where x is a value holds if: x = y and defined y are part of the statement list
+defined s where s is a statement holds if: s or not s are part of the statement list
+
+How this extends mathematical logic:
+- Normally, you build a language and then make statements about that language. This new approach instead combines building the language/model, and simultaneously merges statements about the language/model into the statement list. The result are "intermediate" steps in the construction of the statement list, where you can get statements about the state of the model (e.g. which symbols are defined)
+
+Proving something is defined also means the system knows how it's defined: Since the explicit (constructive?) proof that connects the symbol to its definition already exists, getting the value of e.g. f(5) will yield the explicit value of that function in a O(n) proof 

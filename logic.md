@@ -1,18 +1,20 @@
+data Bool = True | False
+
 def not(x: Bool) where
-    not true = false
-    not false = true
+    not True = False
+    not False = True
 
 def and(x: Bool, y: Bool) where
-    true and true = true
-    otherwise x and y = false
+    True and True = True
+    otherwise x and y = False
 
 def or(x: Bool, y: Bool) where
     x or y = not ((not x) and (not y))
 
 def xor(x: Bool, y: Bool) where
-    true xor false = true
-    false xor true = true
-    otherwise x xor y = false
+    True xor False = True
+    False xor True = True
+    otherwise x xor y = False
 
 
 proofs

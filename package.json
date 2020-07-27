@@ -1,0 +1,11 @@
+{
+  "name": "logb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Christian Bielert <cib123@googlemail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}
