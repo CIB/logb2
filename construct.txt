@@ -1,3 +1,39 @@
+Constructs:
+- Statement
+- Block
+    - Free variables
+    - Conditions
+- Statement constructions
+    - Deduce
+        - Rule
+        - Parameters
+        - In
+        - Out
+    - Import
+    - Wrap
+    - Unwrap
+    - Shake
+    - Defined
+
+Module:
+- Base modules
+- Relations
+- Data
+- Constructor
+- Structural induction
+- Axioms
+
+Organization:
+- Theory
+    - Set of modules as base for proofs
+- Library
+    - Public collection of theories and related proofs
+    - Shelf:
+        - Subsection of area of interest, with its own theory
+        - Notebook:
+            - Specific topic with organized proofs (descriptions, explanations, as well as proofs)
+            - Axiomatic modules are also notebooks
+
 Basic language constructs:
 - Statement list
 - Conclude
@@ -12,7 +48,21 @@ Basic language constructs:
 defined x where x is a value holds if: x = y and defined y are part of the statement list
 defined s where s is a statement holds if: s or not s are part of the statement list
 
+Construction Rules:
+- Deduction
+- Scope into block
+- Descope from block
+- Import
+
 How this extends mathematical logic:
 - Normally, you build a language and then make statements about that language. This new approach instead combines building the language/model, and simultaneously merges statements about the language/model into the statement list. The result are "intermediate" steps in the construction of the statement list, where you can get statements about the state of the model (e.g. which symbols are defined)
 
 Proving something is defined also means the system knows how it's defined: Since the explicit (constructive?) proof that connects the symbol to its definition already exists, getting the value of e.g. f(5) will yield the explicit value of that function in a O(n) proof 
+
+Block scopes:
+- Statements within blocks don't depend in any way on their "scope", just treating variables as "free" variables
+- Blocks can use the "let" quantifier to introduce new "forall" variables
+- Pulling statements into a block is always possible unmodified
+- It's always possible to pull a statement out of a "forall block" by substituting all the free variables with valid values
+- It's always possible to pull a statement out of a conditional block if all the conditions are proven in the outer context for the given free variable substitutions
+
