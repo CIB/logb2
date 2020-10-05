@@ -1,0 +1,15 @@
+let opacityGrid(size): (Int, Int) -> Boolean where
+    (x, y) in def(opacityGrid) iff -size <= x <= size and -size <= y <= size
+
+visible(opacityGrid, x: Int, y: Int) -> isVisible where
+    x between -size, size
+    y between -size, size
+    isVisible iff
+        forall p in line from (0, 0) to (x, y)
+            opacityGrid(p) = false
+
+def slope between (a, b) and (c, d) = (c - a) / (d - b)
+
+def line from a to b as l where
+    c in l iff
+        slope between a and b = slope between b and c = slope between a and c
